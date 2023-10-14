@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fermate [
+  <!ELEMENT fermate (fermata+)>
+  <!ELEMENT fermata (denominazione, ubicazione, indirizzo, numero_civico, telefono, telefono__si_no_, numero_stalli, note, codice_via, civkey, x__coordinata_monte_mariotm_emilia_romagna_, y___coordinata_monte_mariotm_emilia_romagna_, longitudine, latitudine)>
+  <!ATTLIST fermata id CDATA #REQUIRED>
+
+  <!ELEMENT denominazione (#PCDATA)>
+  <!ELEMENT ubicazione (#PCDATA)>
+  <!ELEMENT indirizzo (#PCDATA)>
+  <!ELEMENT numero_civico (#PCDATA)>
+  <!ELEMENT telefono (#PCDATA)>
+  <!ELEMENT telefono__si_no_ (#PCDATA)>
+  <!ELEMENT numero_stalli (#PCDATA)>
+  <!ELEMENT note (#PCDATA)>
+  <!ELEMENT codice_via (#PCDATA)>
+  <!ELEMENT civkey (#PCDATA)>
+  <!ELEMENT x__coordinata_monte_mariotm_emilia_romagna_ (#PCDATA)>
+  <!ELEMENT y___coordinata_monte_mariotm_emilia_romagna_ (#PCDATA)>
+  <!ELEMENT longitudine (#PCDATA)>
+  <!ELEMENT latitudine (#PCDATA)>
+]>
+
+<fermate>
+  <fermata id="1">
+    <denominazione>Aeroporto</denominazione>
+    <ubicazione>Area arrivi</ubicazione>
+    <indirizzo>VIA DEL TRIUMVIRATO</indirizzo>
+    <numero_civico>84</numero_civico>
+    <telefono/>
+    <telefono__si_no_>no</telefono__si_no_>
+    <numero_stalli>34</numero_stalli>
+    <note/>
+    <codice_via>59350</codice_via>
+    <civkey>593500084000</civkey>
+    <x__coordinata_monte_mariotm_emilia_romagna_>682413.27</x__coordinata_monte_mariotm_emilia_romagna_>
+    <y___coordinata_monte_mariotm_emilia_romagna_>933452.01</y___coordinata_monte_mariotm_emilia_romagna_>
+    <longitudine>11.2946671144</longitudine>
+    <latitudine>44.5295674763</latitudine>
+  </fermata>
+
+  <fermata id="2">
+    <denominazione>Albertoni</denominazione>
+    <ubicazione>Accesso pronto soccorso S. Orsola</ubicazione>
+    <indirizzo>VIA PIETRO ALBERTONI</indirizzo>
+    <numero_civico>9</numero_civico>
+    <telefono/>
+    <telefono__si_no_>no</telefono__si_no_>
+    <numero_stalli>2</numero_stalli>
+    <note/>
+    <codice_via>1200</codice_via>
+    <civkey>012000009000</civkey>
+    <x__coordinata_monte_mariotm_emilia_romagna_>687985.68</x__coordinata_monte_mariotm_emilia_romagna_>
+    <y___coordinata_monte_mariotm_emilia_romagna_>929110.26</y___coordinata_monte_mariotm_emilia_romagna_>
+    <longitudine>11.3631583595</longitudine>
+    <latitudine>44.4890841995</latitudine>
+  </fermata>
+
+  <fermata id="3">
+    <denominazione>Aldo Moro</denominazione>
+    <ubicazione>VIALE ALDO MORO,18</ubicazione>
+    <indirizzo>VIALE ALDO MORO</indirizzo>
+    <numero_civico>18</numero_civico>
+    <telefono/>
+    <telefono__si_no_>no</telefono__si_no_>
+    <numero_stalli>16</numero_stalli>
+    <note/>
+    <codice_via>40280</codice_via>
+    <civkey>402800018000</civkey>
+    <x__coordinata_monte_mariotm_emilia_romagna_>687881.7</x__coordinata_monte_mariotm_emilia_romagna_>
+    <y___coordinata_monte_mariotm_emilia_romagna_>931364.39</y___coordinata_monte_mariotm_emilia_romagna_>
+    <longitudine>11.3626707876</longitudine>
+    <latitudine>44.5093868803</latitudine>
+  </fermata>
+
+  <fermata id="4">
+    <denominazione>"Aldrovandi"</denominazione>
+    <ubicazione>"Piazza Aldrovandi,12"</ubicazione>
+    <indirizzo>"Piazza Aldrovandi"</indirizzo>
+    <numero_civico>"12"</numero_civico>
+    <telefono>"051.23.33.01"</telefono>
+    <telefono__si_no_>"si"</telefono__si_no_>
+    <numero_stalli>5</numero_stalli>
+    <note>""</note>
+    <codice_via>"1400"</codice_via>
+    <civkey>"014000012000"</civkey>
+    <x__coordinata_monte_mariotm_emilia_romagna_>"687054.92"</x__coordinata_monte_mariotm_emilia_romagna_>
+    <y___coordinata_monte_mariotm_emilia_romagna_>"929635.36"</y___coordinata_monte_mariotm_emilia_romagna_>
+    <longitudine>"11.3516525319"</longitudine>
+    <latitudine>"44.4940489439"</latitudine>
+  </fermata>
+</fermate>
