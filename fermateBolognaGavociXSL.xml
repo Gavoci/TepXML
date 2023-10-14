@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+  <xsl:template match="/fermate">
+    <html>
+      <head>
+        <title>Fermate</title>
+      </head>
+      <body>
+        <table border="1">
+          <tr>
+            <th>ID</th>
+            <th>Denominazione</th>
+            <th>Ubicazione</th>
+            <th>Indirizzo</th>
+            <th>Numero Civico</th>
+            <th>Telefono</th>
+            <th>Telefono Si/No</th>
+            <th>Numero Stalli</th>
+            <th>Note</th>
+            <th>Codice Via</th>
+            <th>Civkey</th>
+            <th>X Coordinata</th>
+            <th>Y Coordinata</th>
+            <th>Longitudine</th>
+            <th>Latitudine</th>
+          </tr>
+          <xsl:apply-templates select="fermata" />
+        </table>
+      </body>
+    </html>
+  </xsl:template>
+
+  <xsl:template match="fermata">
+    <tr>
+      <td><xsl:value-of select="@id"/></td>
+      <td><xsl:value-of select="denominazione"/></td>
+      <td><xsl:value-of select="ubicazione"/></td>
+      <td><xsl:value-of select="indirizzo"/></td>
+      <td><xsl:value-of select="numero_civico"/></td>
+      <td><xsl:value-of select="telefono"/></td>
+      <td><xsl:value-of select="telefono__si_no_"/></td>
+      <td><xsl:value-of select="numero_stalli"/></td>
+      <td><xsl:value-of select="note"/></td>
+      <td><xsl:value-of select="codice_via"/></td>
+      <td><xsl:value-of select="civkey"/></td>
+      <td><xsl:value-of select="x__coordinata_monte_mariotm_emilia_romagna_"/></td>
+      <td><xsl:value-of select="y___coordinata_monte_mariotm_emilia_romagna_"/></td>
+      <td><xsl:value-of select="longitudine"/></td>
+      <td><xsl:value-of select="latitudine"/></td>
+    </tr>
+  </xsl:template>
+
+</xsl:stylesheet>
