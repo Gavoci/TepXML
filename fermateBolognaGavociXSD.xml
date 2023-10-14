@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="fermate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="fermata" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="denominazione" type="xs:string"/>
+              <xs:element name="ubicazione" type="xs:string"/>
+              <xs:element name="indirizzo" type="xs:string"/>
+              <xs:element name="numero_civico" type="xs:string"/>
+              <xs:element name="telefono" type="xs:string" minOccurs="0"/>
+              <xs:element name="telefono__si_no_" type="xs:string"/>
+              <xs:element name="numero_stalli" type="xs:positiveInteger"/>
+              <xs:element name="note" type="xs:string" minOccurs="0"/>
+              <xs:element name="codice_via" type="xs:string"/>
+              <xs:element name="civkey" type="xs:string"/>
+              <xs:element name="x__coordinata_monte_mariotm_emilia_romagna_" type="xs:decimal"/>
+              <xs:element name="y___coordinata_monte_mariotm_emilia_romagna_" type="xs:decimal"/>
+              <xs:element name="longitudine" type="xs:decimal"/>
+              <xs:element name="latitudine" type="xs:decimal"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
