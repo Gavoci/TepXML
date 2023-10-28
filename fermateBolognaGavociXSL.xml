@@ -1,57 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-<xsl:template match="/">
-  <html>
-    <head>
-      <style>
-        table {
-          border-collapse: collapse;
-          width: 100%;
-        }
-        th, td {
-          border: 1px solid black;
-          padding: 8px;
-          text-align: left;
-        }
-      </style>
-    </head>
-    <body>
-      <h2>Fermate</h2>
-      <table>
-        <tr>
-          <th>ID</th>
-          <th>Denominazione</th>
-          <th>Ubicazione</th>
-          <th>Indirizzo</th>
-          <th>Numero Civico</th>
-          <th>Telefono</th>
-          <th>Numero Stalli</th>
-          <th>Codice Via</th>
-          <th>Civkey</th>
-          <th>Coordinata X</th>
-          <th>Coordinata Y</th>
-          <th>Longitudine</th>
-          <th>Latitudine</th>
-        </tr>
-        <xsl:for-each select="fermate/fermata">
+  <xsl:template match="/">
+    <html>
+      <head>
+        <title>Fermate</title>
+      </head>
+      <body>
+        <h1>Fermate dei mezzi pubblici</h1>
+        <table border="1">
           <tr>
-            <td><xsl:value-of select="@id"/></td>
-            <td><xsl:value-of select="denominazione"/></td>
-            <td><xsl:value-of select="ubicazione"/></td>
-            <td><xsl:value-of select="indirizzo"/></td>
-            <td><xsl:value-of select="numero_civico"/></td>
-            <td><xsl:value-of select="telefono__si_no_"/></td>
-            <td><xsl:value-of select="numero_stalli"/></td>
-            <td><xsl:value-of select="codice_via"/></td>
-            <td><xsl:value-of select="civkey"/></td>
-            <td><xsl:value-of select="coordinata_x"/></td>
-            <td><xsl:value-of select="coordinata_y"/></td>
-            <td><xsl:value-of select="longitudine"/></td>
-            <td><xsl:value-of select="latitudine"/></td>
+            <th>ID</th>
+            <th>Denominazione</th>
+            <th>Ubicazione</th>
+            <th>Indirizzo</th>
+            <th>Numero Civico</th>
+            <th>Telefono</th>
+            <th>Numero Stalli</th>
+            <th>Codice Via</th>
+            <th>CIVKEY</th>
+            <th>Coordinata X</th>
+            <th>Coordinata Y</th>
+            <th>Longitudine</th>
+            <th>Latitudine</th>
           </tr>
-        </xsl:for-each>
-      </table>
-    </body>
-  </html>
-</xsl:template>
+          <xsl:for-each select="fermate/fermata">
+            <tr>
+              <td><xsl:value-of select="@id"/></td>
+              <td><xsl:value-of select="denominazione"/></td>
+              <td><xsl:value-of select="ubicazione"/></td>
+              <td><xsl:value-of select="indirizzo"/></td>
+              <td><xsl:value-of select="numero_civico"/></td>
+              <td><xsl:value-of select="telefono__si_no_"/></td>
+              <td><xsl:value-of select="numero_stalli"/></td>
+              <td><xsl:value-of select="codice_via"/></td>
+              <td><xsl:value-of select="civkey"/></td>
+              <td><xsl:value-of select="coordinata_x"/></td>
+              <td><xsl:value-of select="coordinata_y"/></td>
+              <td><xsl:value-of select="longitudine"/></td>
+              <td><xsl:value-of select="latitudine"/></td>
+            </tr>
+          </xsl:for-each>
+        </table>
+      </body>
+    </html>
+  </xsl:template>
 </xsl:stylesheet>
