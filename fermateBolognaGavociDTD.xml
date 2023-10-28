@@ -3,7 +3,7 @@
   <!ELEMENT fermate (fermata+)>
   <!ELEMENT fermata (denominazione, ubicazione, indirizzo, numero_civico, telefono, telefono__si_no_, numero_stalli, note, codice_via, civkey, x__coordinata_monte_mariotm_emilia_romagna_, y___coordinata_monte_mariotm_emilia_romagna_, longitudine, latitudine)>
   <!ATTLIST fermata id CDATA #REQUIRED>
-
+  <!ELEMENT classe EMPTY> 
   <!ELEMENT denominazione (#PCDATA)>
   <!ELEMENT ubicazione (#PCDATA)>
   <!ELEMENT indirizzo (#PCDATA)>
@@ -22,6 +22,7 @@
 
 <fermate>
   <fermata id="1">
+    <classe nome="5IA"> </classe>
     <denominazione>Aeroporto</denominazione>
     <ubicazione>Area arrivi</ubicazione>
     <indirizzo>VIA DEL TRIUMVIRATO</indirizzo>
@@ -39,6 +40,7 @@
   </fermata>
 
   <fermata id="2">
+    <classe nome="4IA"> </classe>
     <denominazione>Albertoni</denominazione>
     <ubicazione>Accesso pronto soccorso S. Orsola</ubicazione>
     <indirizzo>VIA PIETRO ALBERTONI</indirizzo>
@@ -56,6 +58,7 @@
   </fermata>
 
   <fermata id="3">
+    <classe nome="5ID"> </classe>
     <denominazione>Aldo Moro</denominazione>
     <ubicazione>VIALE ALDO MORO,18</ubicazione>
     <indirizzo>VIALE ALDO MORO</indirizzo>
@@ -73,6 +76,7 @@
   </fermata>
 
   <fermata id="4">
+    <classe nome="3ID"> </classe>
     <denominazione>Aldrovandi</denominazione>
     <ubicazione>Piazza Aldrovandi,12</ubicazione>
     <indirizzo>Piazza Aldrovandi</indirizzo>
