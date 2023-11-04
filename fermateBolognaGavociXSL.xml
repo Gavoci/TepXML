@@ -8,36 +8,27 @@
     </head>
     <body>
       <h1>Fermate dei mezzi di trasporto</h1>
-      <table border="1">
-        <tr>
-          <th>ID</th>
-          <th>Denominazione</th>
-          <th>Ubicazione</th>
-          <th>Indirizzo</th>
-          <th>Numero Civico</th>
-          <th>Telefono</th>
-          <th>Numero Stalli</th>
-          <th>CoordX</th>
-          <th>CoordY</th>
-          <th>Longitudine</th>
-          <th>Latitudine</th>
-        </tr>
+      <ul>
         <xsl:for-each select="fermate/fermata">
-          <tr>
-            <td><xsl:value-of select="@id"/></td>
-            <td><xsl:value-of select="denominazione"/></td>
-            <td><xsl:value-of select="ubicazione"/></td>
-            <td><xsl:value-of select="indirizzo"/></td>
-            <td><xsl:value-of select="numero_civico"/></td>
-            <td><xsl:value-of select="telefono__si_no_"/></td>
-            <td><xsl:value-of select="numero_stalli"/></td>
-            <td><xsl:value-of select="coordinata_x"/></td>
-            <td><xsl:value-of select="coordinata_y"/></td>
-            <td><xsl:value-of select="longitudine"/></td>
-            <td><xsl:value-of select="latitudine"/></td>
-          </tr>
+          <li>
+            <xsl:value-of select="denominazione"/>
+            <ul>
+              <li>ID: <xsl:value-of select="@id"/></li>
+              <li>Ubicazione: <xsl:value-of select="ubicazione"/></li>
+              <li>Indirizzo: <xsl:value-of select="indirizzo"/></li>
+              <li>Numero Civico: <xsl:value-of select="numero_civico"/></li>
+              <li>Telefono: <xsl:value-of select="telefono__si_no_"/></li>
+              <li>Numero Stalli: <xsl:value-of select="numero_stalli"/></li>
+              <li>Codice Via: <xsl:value-of select="codice_via"/></li>
+              <li>Civkey: <xsl:value-of select="civkey"/></li>
+              <li>CoordX: <xsl:value-of select="coordinata_x"/></li>
+              <li>CoordY: <xsl:value-of select="coordinata_y"/></li>
+              <li>Longitudine: <xsl:value-of select="longitudine"/></li>
+              <li>Latitudine: <xsl:value-of select="latitudine"/></li>
+            </ul>
+          </li>
         </xsl:for-each>
-      </table>
+      </ul>
     </body>
   </html>
 </xsl:template>
