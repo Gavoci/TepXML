@@ -4,31 +4,59 @@
 <xsl:template match="/">
   <html>
     <head>
-      <title>Fermate dei mezzi di trasporto</title>
+      <title>Fermate Bologna Gavoci</title>
+      <style>
+        table {
+          border-collapse: collapse;
+          width: 100%;
+        }
+
+        th, td {
+          border: 1px solid black;
+          padding: 8px;
+          text-align: left;
+        }
+      </style>
     </head>
     <body>
-      <h1>Fermate dei mezzi di trasporto</h1>
-      <ul>
+      <h1>Fermate Bologna Gavoci</h1>
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>Denominazione</th>
+          <th>Ubicazione</th>
+          <th>Indirizzo</th>
+          <th>Numero Civico</th>
+          <th>Telefono</th>
+          <th>Numero Stalli</th>
+          <th>Codice Via</th>
+          <th>Civkey</th>
+          <th>Coordinata X</th>
+          <th>Coordinata Y</th>
+          <th>Longitudine</th>
+          <th>Latitudine</th>
+        </tr>
         <xsl:for-each select="fermate/fermata">
-          <li>
-            <xsl:value-of select="denominazione"/>
-            <ul>
-              <li>ID: <xsl:value-of select="@id"/></li>
-              <li>Ubicazione: <xsl:value-of select="ubicazione"/></li>
-              <li>Indirizzo: <xsl:value-of select="indirizzo"/></li>
-              <li>Numero Civico: <xsl:value-of select="numero_civico"/></li>
-              <li>Telefono: <xsl:value-of select="telefono__si_no_"/></li>
-              <li>Numero Stalli: <xsl:value-of select="numero_stalli"/></li>
-              <li>Codice Via: <xsl:value-of select="codice_via"/></li>
-              <li>Civkey: <xsl:value-of select="civkey"/></li>
-              <li>CoordX: <xsl:value-of select="coordinata_x"/></li>
-              <li>CoordY: <xsl:value-of select="coordinata_y"/></li>
-              <li>Longitudine: <xsl:value-of select="longitudine"/></li>
-              <li>Latitudine: <xsl:value-of select="latitudine"/></li>
-            </ul>
-          </li>
+          <tr>
+            <td><xsl:value-of select="@id"/></td>
+            <td>
+              <xsl:value-of select="denominazione"/>
+              - <xsl:value-of select="denominazione/classe/@nome"/>
+            </td>
+            <td><xsl:value-of select="ubicazione"/></td>
+            <td><xsl:value-of select="indirizzo"/></td>
+            <td><xsl:value-of select="numero_civico"/></td>
+            <td><xsl:value-of select="telefono__si_no_"/></td>
+            <td><xsl:value-of select="numero_stalli"/></td>
+            <td><xsl:value-of select="codice_via"/></td>
+            <td><xsl:value-of select="civkey"/></td>
+            <td><xsl:value-of select="coordinata_x"/></td>
+            <td><xsl:value-of select="coordinata_y"/></td>
+            <td><xsl:value-of select="longitudine"/></td>
+            <td><xsl:value-of select="latitudine"/></td>
+          </tr>
         </xsl:for-each>
-      </ul>
+      </table>
     </body>
   </html>
 </xsl:template>
